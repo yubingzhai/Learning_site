@@ -1,0 +1,18 @@
+
+{% extends "learning_logs/base.html" %}
+
+{% block content %}
+
+    <div class="ui vertical segment">
+        <div class="ui raised very padded text container segment">
+            <form method="post" action="{% url 'users:register' %}" class="ui mini form">
+                {% csrf_token %}
+                {{ form.as_p}}
+
+                <button type="submit" name="submit" class="ui inverted blue button">sbumit</button>
+                <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+            </form>
+        </div>
+    </div>
+
+{% endblock content %}

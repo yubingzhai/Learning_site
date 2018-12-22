@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>yubingzhai</title>
+        <link rel="stylesheet" href="{% static 'css/semantic.css' %}"  media="screen" title="no title" charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway" rel="stylesheet">
+
+
+        <style type="text/css">
+            h1 {
+                font-family:'Oswald', sans-serif!important;
+                font-size:40px;
+            }
+
+            body {
+                font-family: 'Raleway', sans-serif;
+            }
+            p {
+                font-family: 'Raleway', sans-serif;
+                font-size:18px;
+            }
+            .ui.vertical.segment.masthead {
+                height: 300px;
+                background: url({% static 'images/star_banner.jpg' %});
+                background-size: cover;
+                background-position: 100% 70%;
+            }
+
+            .ui.container.segment {
+                width: 800px;
+            }
+
+            .ui.center.aligned.header.blogslogon {
+                margin-top: 80px;
+            }
+
+            .ui.center.aligned.header.blogslogon p {
+                margin-top: 10px;
+                color: white;
+                font-size: 10px;
+            }
+            .ui.container.nav {
+                width: 500px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="ui inverted vertical segment masthead">
+
+            <h1 class="ui center aligned header blogslogon" style="font-size:50px;font-family: 'Raleway', sans-serif!important;">
+                Bloger
+                <p class="ui sub header">
+                    everyone has a story to tell
+                </p>
+
+            </h1>
+        </div>
+
+        <div class="ui fixed stackable inverted menu">
+            <div class="ui container">
+                <a href="{% url 'learning_logs:index' %}" class="item">
+                    <i class="home icon" ></i> 
+                    Home 
+                </a>
+
+                <a href="{% url 'learning_logs:topics' %}" class="item">
+                    <i class="grid layout icon"></i>
+                    Topics
+                </a>
+
+                <a href="{% url 'learning_logs:books' %}" class="item">
+                    <i class="book icon"></i>
+                    Books
+                </a>
+                
+                
+                <div class="right item">
+                    {% if user.is_authenticated %}
+                        <a href="#" class="item">Hello, {{ user.username }}</a>
+                        <i class="cn flag"></i>
+                        <a href="{% url 'users:logout' %}" class="item">Log out</a>
+                    {% else %}
+                        <a href="{% url 'users:register' %}" class="item">Register</a>
+                        <a href="{% url 'users:login' %}" class="item">Log in</a>
+                    {% endif%}
+                </div>
+
+            </div>
+            
+        </div>
+
+
+		{% block content %}
+
+		{% endblock content %}
+
+    </body>
+</html>
+
