@@ -1,6 +1,6 @@
 [TOC]
 
-![learning_site-1](/Users/lianli/Documents/01_Study/02_Program/02_Django/02_Learning_site/learning_site/learning_site-1.png)
+![learning_site-1](learning_site/learning_site-1.png)
 
 #Django Learning_site
 
@@ -72,4 +72,4 @@ Copy below link to a web browser, and can see the fresh simple learning site now
 http://127.0.0.1:8000/
 ```
 
-![learning_site](/Users/lianli/Documents/01_Study/02_Program/02_Django/02_Learning_site/learning_site/learning_site-2.png)
+![learning_site](learning_site/learning_site-2.png)
