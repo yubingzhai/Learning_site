@@ -1,11 +1,19 @@
 
 {% extends "learning_logs/base.html" %}
+
+{% block header %}
+	<div class='ui  vertical  segment'> 
+		<div class="ui container segment">
+			<h3 class="ui header">Add a new entry:</h3>
+		</div>
+	</div>
+{% endblock header %}
+
 {% block content %}
    
     <div class="ui  vertical  segment">
         <div class="ui container segment">
-            <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>
-            <p>Add a new entry:</p>	
+            <p><a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a></p>	
         </div>
 
         <div class="ui container segment">

@@ -1,10 +1,18 @@
 
 {% extends "learning_logs/base.html" %}
+
+{% block header %}
+	<div class='ui  vertical  segment'> 
+		<div class="ui container segment">
+			<h3 class="ui header">Add a new topic:</h3>
+		</div>
+	</div>
+{% endblock header %}
+
 {% block content %}
    
     <div class="ui  vertical  segment">
         <div class="ui container segment">
-            <p>Add a new topic:</p>
 
             <form action="{% url 'learning_logs:new_topic' %}" method="post">
                 {% csrf_token %}

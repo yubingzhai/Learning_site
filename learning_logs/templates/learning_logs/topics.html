@@ -1,10 +1,18 @@
 
 {% extends "learning_logs/base.html" %}
+
+{% block header %}
+	<div class='ui  vertical  segment'> 
+		<div class="ui container segment">
+			<h3 class="ui header">Topics</h3>
+		</div>
+	</div>
+{% endblock header %}
+
 {% block content %}
 
     <div class="ui  vertical  segment">
         <div class="ui container segment">
-            <p>Topics</p>
 			<ul>
 				{% for topic in topics %}
 					<li>

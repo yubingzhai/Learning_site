@@ -1,6 +1,14 @@
 {% extends "learning_logs/base.html" %}
+
+{% block header %}
+	<div class='ui  vertical  segment'> 
+		<div class="ui raised very padded text container segment">
+			<h3 class="ui header">Log in to your account.</h3>
+		</div>
+	</div>
+{% endblock header %}
+
 {% block content %}
-   
     <div class="ui vertical segment">
         <div class="ui raised very padded text container segment">
             {% if form.errors %}
@@ -19,5 +27,4 @@
 						
         </div>    
     </div>
-
 {% endblock content %}

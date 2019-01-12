@@ -1,8 +1,15 @@
 
 {% extends "learning_logs/base.html" %}
 
+{% block header %}
+	<div class='ui  vertical  segment'> 
+		<div class="ui container segment">
+			<h3 class="ui header">Track your learning.</h3>
+		</div>
+	</div>
+{% endblock header %}
+
 {% block content %}
-   
     <div class="ui  vertical  segment">
         <div class="ui container segment">
             <p>To make your own Learning Log, and list the topics you're learning about.</p>
@@ -14,7 +21,6 @@
 			</p>
         </div>           
     </div>
-
 {% endblock content %}
 
 
