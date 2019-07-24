@@ -2,15 +2,15 @@
 
 ![learning_site-1](learning_site/learning_site-1.png)
 
-#Django Learning_site
+# Django Learning_site
 
-##00 Requirements
+## 00 Requirements
 
 Django== 2.1.4
 pytz== 2018.7
 Python==3.6.3
 
-##01 Start a virtual environment
+## 01 Start a virtual environment
 
 ```python
 lianli$ python3 -m venv ll_env
