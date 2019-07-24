@@ -1,4 +1,3 @@
-[TOC]
 
 ![learning_site-1](learning_site/learning_site-1.png)
 
@@ -34,7 +33,7 @@ lianli$ pip install Django
 lianli$ django-admin.py startproject learning_site .
 ```
 
-##05 Create SQL
+## 05 Create SQL
 
 ```python
 lianli$ python3 manage.py migrate
